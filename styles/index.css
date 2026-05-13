@@ -1,0 +1,30 @@
+/* css 시작 */
+html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
+#wrap {
+    width:100%; min-width:320px; margin:0 auto;
+}
+#wrap #cover {
+    background:linear-gradient(135deg, #fff, #ddd);
+    height:100vh;
+}
+#wrap #cover .title {
+    display:flex; flex-flow:column nowrap;
+    justify-content:center; align-items:center; gap:30px;
+}
+#wrap #cover .title .title_top {position:relative;}
+#wrap #cover .title .title_top h1 {
+    /* font-family: 'Batang_Bold'; */ font-size:9.38rem; color:#2E69A0;
+}
+#wrap #cover .title .title_top span {
+    /* font-family: 'Batang_Bold'; */ font-size:4.06rem; color:#ccc;
+    position:absolute; right:-20%; top:0;
+}
+#wrap #cover .title .title_bottom {
+    display:flex; gap:15px; align-items:center;
+}
+#wrap #cover .title .title_bottom h2 {
+    /* font-family: 'Batang_Regular';  */font-size:1.5rem; color:#888;
+}
+#wrap #cover .title .title_bottom span {
+    display:block; width:2px; height:12px; background:#888;
+}
