@@ -91,3 +91,41 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
     display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
 }
 #wrap #profile .profile_inner .profile_side .info_skill .skill_list ul li img {}
+/* ----------------------------------------------------------------index */
+#wrap #index {
+    display:flex; flex-flow:row nowrap; 
+}
+#wrap #index .index_container {
+    width:calc(100% / 5); flex:1; height:100vh;
+    background-position:center; background-size:cover;
+    background-repeat:no-repeat;
+    padding:80px 0;
+    display:flex; flex-flow:column nowrap; 
+    justify-content:space-between; align-items:center;
+}
+#wrap #index .index_container h2 {
+    font-family: 'Daehan-Bold'; font-size:3.13rem;
+    color:#fff;
+}
+#wrap #index .index1 h2 {color: #2E69A0; font-size:2.5rem;}
+#wrap #index .index_container .index_contents {
+    display:flex; gap:10px; justify-content:center; align-items:center;
+}
+#wrap #index .index_container .index_contents .index_title {
+    display:flex; gap:5px; justify-content:center; align-items:center;
+}
+#wrap #index .index_container .index_contents .index_title h3 {
+    font-size:0.88rem; font-weight:500; color:#fff;
+}
+#wrap #index .index_container .index_contents .index_title p {
+    font-size:0.75rem; font-weight:300; color:#fff;
+}
+#wrap #index .index_container .index_contents span {
+    font-size:1.25rem; font-weight:600; color:#DDEEFD;
+}
+#wrap #index .index5 .index_contents span {color:#77ACDD;}
+#wrap #index .index1 {}
+#wrap #index .index2 {background-image: url(../images/index/index1.png);}
+#wrap #index .index3 {background-image: url(../images/index/index2.png);}
+#wrap #index .index4 {background-image: url(../images/index/index3.png);}
+#wrap #index .index5 {background-image: url(../images/index/index4.png);}
