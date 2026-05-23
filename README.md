@@ -3,4 +3,6 @@
 ### 2025.05.20
 * section#index html, css 완료
 ### 2025.05.22
-* section#web_tonymoly html 진행 중
+* section#web_tonymoly html 작업 완료(공통)
+### 2025.05.23
+* section#web_tonymoly 선택자 작업 완료, css 진행 중(공통)
