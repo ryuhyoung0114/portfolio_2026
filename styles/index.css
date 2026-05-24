@@ -202,3 +202,41 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
 #wrap .web_project .web_media .media_img .img_line .line_device .device {
     font-size:0.88rem; color:#2E69A0;
 }
+/* ----------------------------------------------------------------web_project_TONYMOLY_description */
+#wrap .web_project .web_description {}
+#wrap .web_project .web_description .desc_left {}
+#wrap .web_project .web_description .desc_left .left_top {}
+#wrap .web_project .web_description .desc_left .left_top dl {}
+#wrap .web_project .web_description .desc_left .left_top dl dt {}
+#wrap .web_project .web_description .desc_left .left_top dl dd {}
+#wrap .web_project .web_description .desc_left .left_top dl dd img {}
+#wrap .web_project .web_description .desc_left .left_middle {}
+#wrap .web_project .web_description .desc_left .left_middle h2 {}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn {}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn a {}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn a span {}
+#wrap .web_project .web_description .desc_left .left_bottom {}
+#wrap .web_project .web_description .desc_left .left_bottom h2 {color:#333; font-size:0.88rem;}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn {
+    display:flex; gap:10px;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn {
+    display:flex; flex-flow:column nowrap;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .git_btn {
+    width:160px; height:52px; border:1px solid #2E69A0;
+    border-radius:30px; color:#2E69A0;
+    line-height:52px; text-align:center;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .git_btn:hover {
+    background:#2E69A0; color:#fff; font-weight:500;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .original_site {}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn > a {
+    width:160px; height:52px; background:#e9e9e9;
+    border-radius:30px; color:#888;
+    line-height:52px; text-align:center;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn > a:hover {
+    background:#b9b9b9; color:#333; font-weight:500;
+}
