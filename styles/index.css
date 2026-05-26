@@ -132,9 +132,17 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
 /* ----------------------------------------------------------------web_project_TONYMOLY */
 #wrap .web_project {}
 #wrap .web_project .web_container {
-    background-image:url(../images/web/tonymoly_mockup_detail.jpg);
     background-position:center; background-size:cover;
     width:100%; height:100vh; padding:40px 150px 0;
+}
+#wrap #web_tonymoly .web_container {
+    background-image:url(../images/web/tonymoly_mockup_detail.jpg);
+}
+#wrap #web_nespresso .web_container {
+    background-image:url(../images/web/nespresso_mockup_detail.jpg);
+}
+#wrap #web_saintjames .web_container {
+    background-image:url(../images/web/saintjames_mockup_detail.jpg);
 }
 #wrap .web_project .web_container .web_header {
     display:flex; justify-content:space-between;
@@ -167,8 +175,10 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
     font-size:0.75rem; font-weight:300px;
     line-height:1.8; color:#555;
 }
+/* ----------------------------------------------------------------web_project_TONYMOLY_media */
 #wrap .web_project .web_media {
-        width:100%; padding:46.5px 300px;
+    width:100%; padding:46.5px 300px;
+    border-bottom:1px solid #d9d9d9;
 }
 #wrap .web_project .web_media .media_contents {
     display:flex; gap:15px; align-items:center;
@@ -181,16 +191,30 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
     font-size:0.75rem; font-weight:300px; color:#555;
 }
 #wrap .web_project .web_media .media_img {
-    display:flex; gap:30px;
+    display:flex; gap:30px; width:100%; position:relative;
+    justify-content:space-between;
 }
 #wrap .web_project .web_media .media_img img {}
 #wrap .web_project .web_media .media_img .img_line {
     display:flex;
 }
+#wrap .web_project .web_media .media_img .img_line::before {
+    content:''; display:block; width:1120px; height:1px;
+    background:#2E69A0;
+    position:absolute; left:70px; top:50%; transform:translateY(-50%);
+}
 #wrap .web_project .web_media .media_img .img_line .line_device {
     display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
     gap:10px;
 }
+#wrap .web_project .web_media .media_img .img_line .mobile,
+#wrap .web_project .web_media .media_img .img_line .tablet,
+#wrap .web_project .web_media .media_img .img_line .desktop {
+    position:absolute; top:50%; transform:translateY(-50%);
+}
+#wrap .web_project .web_media .media_img .img_line .mobile {left:20%; animation:mobile_move 3s;}
+#wrap .web_project .web_media .media_img .img_line .tablet {left:50%;}
+#wrap .web_project .web_media .media_img .img_line .desktop {left:88%; animation:desktop_move 3s;}
 #wrap .web_project .web_media .media_img .img_line .line_device > p {}
 #wrap .web_project .web_media .media_img .img_line .line_device .pixel {
     font-size:0.75rem; font-weight:300px; color:#2E69A0;
@@ -202,26 +226,77 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
 #wrap .web_project .web_media .media_img .img_line .line_device .device {
     font-size:0.88rem; color:#2E69A0;
 }
+/* web_media 애니메이션 */
+@keyframes mobile_move {
+    0% {left:50%;}
+    100% {left:20%;}
+}
+@keyframes desktop_move {
+    0% {left:50%;}
+    100% {left:88%;}
+}
 /* ----------------------------------------------------------------web_project_TONYMOLY_description */
-#wrap .web_project .web_description {}
-#wrap .web_project .web_description .desc_left {}
+#wrap .web_project .web_description {
+    display:flex; flex-flow:row nowrap;
+    border-bottom:1px solid #d9d9d9;
+}
+#wrap .web_project .web_description .desc_left {
+    display:flex; flex-flow:column nowrap; gap:40px;
+    justify-content:flex-end; padding:75px 0; flex:660fr;
+    margin:0 auto;
+}
 #wrap .web_project .web_description .desc_left .left_top {}
-#wrap .web_project .web_description .desc_left .left_top dl {}
-#wrap .web_project .web_description .desc_left .left_top dl dt {}
-#wrap .web_project .web_description .desc_left .left_top dl dd {}
-#wrap .web_project .web_description .desc_left .left_top dl dd img {}
+#wrap .web_project .web_description .desc_left .left_top dl {
+    display:flex; flex-flow:row nowrap;
+    margin-bottom:15px;
+}
+#wrap .web_project .web_description .desc_left .left_top dl:last-child {margin-bottom:0;}
+#wrap .web_project .web_description .desc_left .left_top dl dt {
+    font-size:0.75rem; font-weight:300; color:#888;
+    width:80px;
+}
+#wrap .web_project .web_description .desc_left .left_top dl dd {
+    font-size:0.88rem; color:#555;
+    line-height:1.4;
+}
+#wrap .web_project .web_description .desc_left .left_top .project_contents dd {display:flex; flex-flow:column nowrap; gap:5px;}
+#wrap .web_project .web_description .desc_left .left_top .project_contents dd > p {font-size:0.88rem; color:#555;}
+#wrap .web_project .web_description .desc_left .left_top .project_contents dd > p:first-child {font-weight:500;}
+#wrap .web_project .web_description .desc_left .left_top .project_skill {}
+#wrap .web_project .web_description .desc_left .left_top .project_skill dd {
+    width:25px; height:25px; margin-right:10px;
+    display:inline-block;
+    text-align:center; line-height:25px;
+}
+#wrap .web_project .web_description .desc_left .left_top .project_skill dd img {height:100%;}
 #wrap .web_project .web_description .desc_left .left_middle {}
-#wrap .web_project .web_description .desc_left .left_middle h2 {}
-#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn {}
-#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn a {}
-#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn a span {}
+#wrap .web_project .web_description .desc_left .left_middle h2 {
+    color:#333; font-size:0.88rem; margin-bottom:10px;
+}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn {display:flex; gap:10px;}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn > a:hover,
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn > a:hover * {
+    background:#2E69A0; color:#fff;
+}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn > a {
+    width:80px; height:80px; border-radius:60px;
+    border:1px solid #2E69A0;
+    display:flex; flex-flow:column nowrap;
+    justify-content:center; align-items:center;
+}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn * {color:#2E69A0;}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn > a > p {margin-bottom:2px;}
+#wrap .web_project .web_description .desc_left .left_middle .figma_url_btn > a > span {font-size:0.88rem;}
 #wrap .web_project .web_description .desc_left .left_bottom {}
-#wrap .web_project .web_description .desc_left .left_bottom h2 {color:#333; font-size:0.88rem;}
+#wrap .web_project .web_description .desc_left .left_bottom h2 {
+    color:#333; font-size:0.88rem; margin-bottom:10px;
+}
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn {
     display:flex; gap:10px;
 }
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn {
-    display:flex; flex-flow:column nowrap;
+    display:flex; flex-flow:column nowrap; gap:5px;
+    justify-content:center; align-items:center;
 }
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .git_btn {
     width:160px; height:52px; border:1px solid #2E69A0;
@@ -231,7 +306,19 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .git_btn:hover {
     background:#2E69A0; color:#fff; font-weight:500;
 }
-#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .original_site {}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .original_site {
+    font-size:0.75rem; color:#888; text-decoration:underline;
+}
+#wrap #web_nespresso .web_description .original_site,
+#wrap #web_saintjames .web_description .original_site {
+    font-size:0.75rem; color:#888; text-decoration:underline;
+    margin-top:-30px; text-align:center;
+}
+#wrap .web_project .web_description .desc_left .left_bottom .web_url_btn .proto_btn .original_site:hover,
+#wrap #web_nespresso .web_description .original_site:hover,
+#wrap #web_saintjames .web_description .original_site:hover {
+    color:#555;
+}
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn > a {
     width:160px; height:52px; background:#e9e9e9;
     border-radius:30px; color:#888;
@@ -239,4 +326,17 @@ html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
 }
 #wrap .web_project .web_description .desc_left .left_bottom .web_url_btn > a:hover {
     background:#b9b9b9; color:#333; font-weight:500;
+}
+#wrap .web_project .web_description .desc_right {
+    background-position:center; background-size:cover;
+    height:700px; width:1260px;
+}
+#wrap #web_tonymoly .web_description .desc_right {
+    background-image:url(../images/web/tonymoly_mockup_main.jpg);
+}
+#wrap #web_nespresso .web_description .desc_right {
+    background-image:url(../images/web/nespresso_mockup_main.jpg);
+}
+#wrap #web_saintjames .web_description .desc_right {
+    background-image:url(../images/web/saintjames_mockup_main.jpg);
 }
